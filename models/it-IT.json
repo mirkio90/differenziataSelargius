@@ -1,0 +1,135 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "differenziata",
+      "intents": [
+        {
+          "name": "GiornoIntent",
+          "slots": [
+            {
+              "name": "Giorno",
+              "type": "LIST_OF_DAYS"
+            }
+          ],
+          "samples": [
+            "che passa {Giorno}",
+            "di {Giorno}"
+          ]
+        },
+        {
+          "name": "TipoIntent",
+          "slots": [
+            {
+              "name": "Tipologia",
+              "type": "LIST_OF_TYPES"
+            }
+          ],
+          "samples": [
+            "giorno di raccolta del {Tipologia}",
+            "giorno di raccolta della {Tipologia}",
+            "quando raccolgono il {Tipologia}",
+            "quando raccolgono la {Tipologia}"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "lunedì"
+              }
+            },
+            {
+              "name": {
+                "value": "martedì"
+              }
+            },
+            {
+              "name": {
+                "value": "mercoledì"
+              }
+            },
+            {
+              "name": {
+                "value": "giovedì"
+              }
+            },
+            {
+              "name": {
+                "value": "venerdì"
+              }
+            },
+            {
+              "name": {
+                "value": "sabato"
+              }
+            },
+            {
+              "name": {
+                "value": "domenica"
+              }
+            },
+            {
+              "name": {
+                "value": "domani"
+              }
+            }
+          ],
+          "name": "LIST_OF_DAYS"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "umido"
+              }
+            },
+            {
+              "name": {
+                "value": "secco"
+              }
+            },
+            {
+              "name": {
+                "value": "vetro"
+              }
+            },
+            {
+              "name": {
+                "value": "carta"
+              }
+            },
+            {
+              "name": {
+                "value": "plastica"
+              }
+            }
+          ],
+          "name": "LIST_OF_TYPES"
+        }
+      ]
+    }
+  },
+  "version": "25"
+}
