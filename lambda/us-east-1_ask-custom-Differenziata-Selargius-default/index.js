@@ -4,7 +4,7 @@
 const Alexa = require('ask-sdk-core');
 const data = require('./values');
 const moment = require('moment');
-var mom = moment();
+const mom = moment();
 mom.locale('it');
 var today = moment().locale('it');
 var tomorrow = moment().locale('it').add(1, 'day');
@@ -31,8 +31,8 @@ const TipoHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'TipoIntent';
   },
   handle(handlerInput) {
-
-    const speechText = 'Questa funzionalità non arriverà presto, per ora chiedimi pure cosa passa nei diversi giorni della settimana!';
+    var rifiuto = handlerInput.requestEnvelope.request.intent.slots.Tipologia.value;
+    const speechText = RubbishHelper.getNextDayRubbish(rifiuto);
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -47,7 +47,6 @@ const GiornoHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'GiornoIntent';
   },
   handle(handlerInput) {
-
     var giorno = handlerInput.requestEnvelope.request.intent.slots.Giorno.value;
     var speechText = "";
 
@@ -73,7 +72,7 @@ const CancelAndStopIntentHandler = {
         || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
   },
   handle(handlerInput) {
-    const speechText = 'Goodbye!';
+    const speechText = 'Ciao! E ricorda di portare fuori la spazzatura!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -100,31 +99,37 @@ const ErrorHandler = {
   handle(handlerInput, error) {
     console.log(`Error handled: ${error.message}`);
 
+    var speechText = 'Scusa, non ho capito la tua richiesta, ';
+    var repromptText = 'prova a chiedermi cosa passerà domani o quando verrà ritirato qualche tipo di rifiuto!'
+
     return handlerInput.responseBuilder
-      .speak('Scusa, non ho capito il tuo comando, per favore prova nuovamente spiegandoti meglio!')
-      .reprompt('Scusa, non ho capito il tuo comando, per favore prova nuovamente spiegandoti meglio!')
+      .speak(speechText + repromptText)
+      .reprompt(repromptText)
       .getResponse();
   },
 };
 
 /* Helper Functions */
+var CalendarHelper = {
+  getCurrentMonthName() {
+      return today.format('MMMM');
+    },
+    getCurrentDayName() {
+      return today.format('ddd');
+    },
+    getCurrentDay() {
+      return today.toDate().getDate()
+    },
+    getTomorrowDayName() {
+      return tomorrow.format('ddd');
+    },
+    getTomorrowDay() {
+      return tomorrow.toDate().getDate()
+    }
+}
 
 var DaysHelper = {
-  getCurrentMonthName() {
-    return today.format('MMMM');
-  },
-  getCurrentDayName() {
-    return today.format('ddd');
-  },
-  getCurrentDay() {
-    return today.toDate().getDate()
-  },
-  getTomorrowDayName() {
-    return tomorrow.format('ddd');
-  },
-  getTomorrowDay() {
-    return tomorrow.toDate().getDate()
-  },
+  
   getRubbishArray(monthName, dayName, dayNumber) {
     var month = data[monthName];
     console.log("current month: " + monthName);
@@ -146,9 +151,9 @@ var DaysHelper = {
   getTomorrowRubbish() {
     console.log("entering getTomorrowRubbish method");
 
-    var monthName = this.getCurrentMonthName();
-    var dayName = this.getTomorrowDayName();
-    var dayNumber = this.getTomorrowDay();
+    var monthName = CalendarHelper.getCurrentMonthName();
+    var dayName = CalendarHelper.getTomorrowDayName();
+    var dayNumber = CalendarHelper.getTomorrowDay();
 
     var rubArray = this.getRubbishArray(monthName, dayName, dayNumber);
 
@@ -159,17 +164,19 @@ var DaysHelper = {
     return stringRub;
   },
   getSpecificDayRubbish(specificDay) {
+    var localMoment = require('moment');
+    var localMom = localMoment().locale('it');
     console.log("entering getSpecificDayRubbish method");
 
-    if (mom.isoWeekday(specificDay).isoWeekday() <= today.isoWeekday() ) {
+    if (localMom.isoWeekday(specificDay).isoWeekday() <= today.isoWeekday() ) {
       console.log("adding one week to requested day");
-      mom.add(1, 'week');
+      localMom.add(1, 'week');
     }
-    console.log("requested date: " + mom.toDate());
+    console.log("requested date: " + localMom.toDate());
     
-    var rubArray = this.getRubbishArray(mom.format('MMMM'), mom.format('ddd'), mom.toDate().getDate());
+    var rubArray = this.getRubbishArray(localMom.format('MMMM'), localMom.format('ddd'), localMom.toDate().getDate());
 
-    var stringRub = this.formatResult(rubArray, mom.format('dddd'))
+    var stringRub = this.formatResult(rubArray, localMom.format('dddd'))
 
     return stringRub;
   },
@@ -213,6 +220,53 @@ var DaysHelper = {
   }
 }
 
+var RubbishHelper = {
+  getNextDayRubbish(rubbishName){
+      var nextDate = this.getDaysValue(rubbishName);
+      return this.formatResult(nextDate);
+  },
+  getDaysValue(rubbishName){
+      monthName = CalendarHelper.getCurrentMonthName();
+      var localMoment = require('moment');
+      var localMom = localMoment().locale('it');
+      var found = false;
+
+      var month = data[monthName];
+      localMom.add(1, 'day'); 
+
+      console.log("current month: " + monthName);
+      while (!found) {
+          var dayNumber = localMom.toDate().getDate();
+          var dayName = localMom.format('ddd');
+
+
+          console.log("requested day: " + dayName + ", " + dayNumber);
+          searchDay = month[dayName];
+          
+          if (searchDay[rubbishName] != null && searchDay[rubbishName].indexOf(dayNumber != -1)) {
+              break;
+          }
+
+          localMom.add(1, 'day'); 
+      }
+
+      console.log('next day found: ' + dayName + ", " + dayNumber);
+      return localMom;
+  },
+  formatResult(dayFound){
+      var dayName = dayFound.format('dddd');
+      var monthName = dayFound.format('MMMM');
+      var dayNumber = dayFound.toDate().getDate();
+
+      var stringDay = "il prossimo ritiro previsto sarà " 
+      if (dayNumber == CalendarHelper.getTomorrowDay()) {
+          stringDay += "domani, "
+      }
+      stringDay += dayName + " " + dayNumber + " " + monthName;
+
+      return stringDay;
+  }
+}
 /* LAMBDA SETUP */
 const skillBuilder = Alexa.SkillBuilders.custom();
 exports.handler = skillBuilder

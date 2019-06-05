@@ -15,15 +15,15 @@
         },
         "lambda": [
           {
-            "arn": "arn:aws:lambda:us-east-1:478052183536:function:ask-custom-Differenziata-Selargius-default",
-            "awsRegion": "us-east-1",
-            "functionName": "ask-custom-Differenziata-Selargius-default",
             "alexaUsage": [
               "custom/default"
             ],
-            "revisionId": "3c326b42-5a03-4c88-9b20-5500024d167b",
+            "arn": "arn:aws:lambda:us-east-1:478052183536:function:ask-custom-Differenziata-Selargius-default",
+            "awsRegion": "us-east-1",
             "codeUri": "lambda/us-east-1_ask-custom-Differenziata-Selargius-default",
+            "functionName": "ask-custom-Differenziata-Selargius-default",
             "handler": "index.handler",
+            "revisionId": "aa5b33cc-8bc2-4ed2-a307-161c766ceee2",
             "runtime": "nodejs8.10"
           }
         ]
