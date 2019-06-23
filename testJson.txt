@@ -1,0 +1,90 @@
+{
+	"version": "1.0",
+	"session": {
+		"new": true,
+		"sessionId": "amzn1.echo-api.session.fd981f13-a478-42f6-a1c5-07e9a9fa0196",
+		"application": {
+			"applicationId": "amzn1.ask.skill.b4536c9d-d009-4a45-ac51-a3473e3c2301"
+		},
+		"user": {
+			"userId": "amzn1.ask.account.AFDLNQTTEKL2UCXDTWDLMUF6UL5AGEJPUIGDEL65GQXZJ2A575KCOIFYH5PQTYWGMDZPYW4TKV6W7LMQ6GE77OFFXYV2EPCB3ZSY3R7QK2VKY64CMVG2BOGD3RBSS2VJIAOSARKIA62AHRM7BUZJYXMK26EZRL7XDNVKNZZJTGRPCKNUGNXDU3E6YKQCDROSR5YJQQZAX6PO5SA"
+		}
+	},
+	"context": {
+		"System": {
+			"application": {
+				"applicationId": "amzn1.ask.skill.b4536c9d-d009-4a45-ac51-a3473e3c2301"
+			},
+			"user": {
+				"userId": "amzn1.ask.account.AFDLNQTTEKL2UCXDTWDLMUF6UL5AGEJPUIGDEL65GQXZJ2A575KCOIFYH5PQTYWGMDZPYW4TKV6W7LMQ6GE77OFFXYV2EPCB3ZSY3R7QK2VKY64CMVG2BOGD3RBSS2VJIAOSARKIA62AHRM7BUZJYXMK26EZRL7XDNVKNZZJTGRPCKNUGNXDU3E6YKQCDROSR5YJQQZAX6PO5SA"
+			},
+			"device": {
+				"deviceId": "amzn1.ask.device.AHAFD5H3KTDTOKL6MUTORDPS5QHX4MSGSLYZNIVQAKG3ADEPVJV3SGU5T7UN5ZD3UCRCEM3PXOTMH532JAJBIWACRR5G6DCGEMZ2PPOBQAD5GPAL6XK74SEPS2IX5M4K7HYMQ4FDGKMTMZPCPSLWC6ATNJ55GSOZ7E7QLNF7VNZUOBZ3R5WVQ",
+				"supportedInterfaces": {}
+			},
+			"apiEndpoint": "https://api.eu.amazonalexa.com",
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmI0NTM2YzlkLWQwMDktNGE0NS1hYzUxLWEzNDczZTNjMjMwMSIsImV4cCI6MTU2MTMyNDE0NywiaWF0IjoxNTYxMzIzODQ3LCJuYmYiOjE1NjEzMjM4NDcsInByaXZhdGVDbGFpbXMiOnsiY29udGV4dCI6IkFBQUFBQUFBQVFDZHBsOU1ubzN4ZUFaS1laMGwwRXkyS2dFQUFBQUFBQUFLQ21jc05wOEduSFo2YUFlaERsbTdIL0NRQUx4MVAzWUZIUnF4b3JiQ1N1ZXFya1E5ZXdra2NGV2l4ZkVuSi9Lb1BybHRNQnlyUzFJS1oyVWJZU3poTVFIT014UUFqbDAxYlJNeE9MdFphaVFJL0tmTnZ6UnkxazZSR3orTWtVTk1MZExpb1hrdS9MVUNYL1lDbmsydFBmRFd1TEZUZVFQQjF2TDVheHhSS2VvZVg0R2ZZMXJUUXJ6U1crWkgzb2VFemdzd0dtc3htbmR6SUd4WnMzNEN0Z2dIUmMvbHlJQWo1L0duRml1bXBmdXpDdU90b3RNK1FLVW1FWE55dmxMa0NUU0k3NE9ZbGNRYnZaNEh2QjNmdUltSnpFUXhoWHNETmdIYXpUTmhXK09uYlhtazZKOTU1RXA0cWlCbnh6ZzFqSUdTZWhlU0I4OHhldkhvNWZ0cGFGVGZCcFRUNktvQzlpYUJtdWkvb3ZkMitaRm0zS3Rmb1FmTDFucUU3ZDVKVEJlK2JaWEhiQk9iIiwiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhBRkQ1SDNLVERUT0tMNk1VVE9SRFBTNVFIWDRNU0dTTFlaTklWUUFLRzNBREVQVkpWM1NHVTVUN1VONVpEM1VDUkNFTTNQWE9UTUg1MzJKQUpCSVdBQ1JSNUc2RENHRU1aMlBQT0JRQUQ1R1BBTDZYSzc0U0VQUzJJWDVNNEs3SFlNUTRGREdLTVRNWlBDUFNMV0M2QVROSjU1R1NPWjdFN1FMTkY3Vk5aVU9CWjNSNVdWUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFGRExOUVRURUtMMlVDWERUV0RMTVVGNlVMNUFHRUpQVUlHREVMNjVHUVhaSjJBNTc1S0NPSUZZSDVQUVRZV0dNRFpQWVc0VEtWNlc3TE1RNkdFNzdPRkZYWVYyRVBDQjNaU1kzUjdRSzJWS1k2NENNVkcyQk9HRDNSQlNTMlZKSUFPU0FSS0lBNjJBSFJNN0JVWkpZWE1LMjZFWlJMN1hETlZLTlpaSlRHUlBDS05VR05YRFUzRTZZS1FDRFJPU1I1WUpRUVpBWDZQTzVTQSJ9fQ.PafNaLYtmSDdL-w2MIdFsgM3Yyq29N6oqDQR-sbZ5yPg8_fGhRYiWYnFmPdhqltEvl4iTJUv7Kxk7VmFVMFc7raqtFvN1yoW3Yn8zuUJYKET2zq6iH6YOX2tWlKZnCtHGtoVb07Ea7TppdsYCfkljibwsoVQajVJkDzRIM1hQawOnJ2R-R6ANtP1j29idzHAwA1qLovlakXACLnd0Idfa6OU2VFLjkoFU-6NlBCxL3jLmMj7mWTzwmMEBXnbLzvV6-2U7SCPkOsm82s5GtzBUUqFsWBouVYAPmccDVm7kcqmNW_XD6wrbLJssJ8zTgbrP2ssJWCaqDv_7ygN7xp4pA"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			],
+			"video": {
+				"codecs": [
+					"H_264_42",
+					"H_264_41"
+				]
+			}
+		}
+	},
+	"request": {
+		"type": "IntentRequest",
+		"requestId": "amzn1.echo-api.request.7eff2b19-b626-41bc-b604-58f81835bb46",
+		"timestamp": "2019-06-23T21:04:07Z",
+		"locale": "it-IT",
+		"intent": {
+			"name": "TipoIntent",
+			"confirmationStatus": "NONE",
+			"slots": {
+				"Tipologia": {
+					"name": "Tipologia",
+					"value": "plastica",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.b4536c9d-d009-4a45-ac51-a3473e3c2301.LIST_OF_TYPES",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "plastica",
+											"id": "94f19b0fc602982cbe8090bdc149b363"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				}
+			}
+		}
+	}
+}

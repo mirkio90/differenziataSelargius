@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "differenziata",
+      "invocationName": "differenziata selargius",
       "intents": [
         {
           "name": "GiornoIntent",
@@ -13,6 +13,7 @@
           ],
           "samples": [
             "che passa {Giorno}",
+            "cosa passa {Giorno}",
             "di {Giorno}"
           ]
         },
@@ -25,10 +26,12 @@
             }
           ],
           "samples": [
-            "giorno di raccolta del {Tipologia}",
-            "giorno di raccolta della {Tipologia}",
+            "il giorno di raccolta del {Tipologia}",
+            "il giorno di raccolta della {Tipologia}",
             "quando raccolgono il {Tipologia}",
-            "quando raccolgono la {Tipologia}"
+            "quando raccolgono la {Tipologia}",
+            "quando passa il {Tipologia}",
+            "quando passa la {Tipologia}"
           ]
         },
         {
@@ -131,5 +134,5 @@
       ]
     }
   },
-  "version": "25"
+  "version": "35"
 }

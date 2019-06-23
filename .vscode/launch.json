@@ -7,8 +7,8 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Test",
-            "program": "${workspaceFolder}\\lambda\\us-east-1_ask-custom-Differenziata-Selargius-default\\test\\test.js"
+            "name": "Launch Program",
+            "program": "${workspaceFolder}\\lambda\\us-east-1_ask-custom-Differenziata-Selargius-default\\test.js"
         }
     ]
 }

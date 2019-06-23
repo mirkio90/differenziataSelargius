@@ -25,14 +25,14 @@
       "locales": {
         "it-IT": {
           "name": "Calendario raccolta differenziata Selargius",
-          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/828a/389e655a05de4de3b548e30911fe9529/APP_ICON?versionId=NE_K0Pk7k_CKtnmPGlYcANEhKi.GwNF9&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190604T211940Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190604%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=2d305f4cf4cc1eb0d614ecd04882588e621cbc6e77a4be4be0fbd375381b54eb",
-          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/eb49/aafb079672ed48c3892879f2a30df45d/APP_ICON_LARGE?versionId=zvZWG3qUSmyJ5l8sY.co8rM.l0hk7txV&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190604T211940Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190604%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=0f2ea005fb99a78dcdd3a856a2aceb3f60b05eb600951681cda164f4282a2c03",
+          "smallIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/828a/389e655a05de4de3b548e30911fe9529/APP_ICON?versionId=NE_K0Pk7k_CKtnmPGlYcANEhKi.GwNF9&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190615T070410Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190615%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=e08f106a2ea3d7ad2fb94faa1b7d2ae728c35d51bc29fb89f7c7034706d43908",
+          "largeIconUri": "https://s3.amazonaws.com/CAPS-SSE/echo_developer/eb49/aafb079672ed48c3892879f2a30df45d/APP_ICON_LARGE?versionId=zvZWG3qUSmyJ5l8sY.co8rM.l0hk7txV&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20190615T070410Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Credential=AKIAJFEYRBGIHK2BBYKA%2F20190615%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=a207303b7ebbc819966602fc4c8e9b519859878b86294036e55930b4570a486c",
           "summary": "Scopri in maniera semplice quali rifiuti ritirano a Selargius, chiedilo ad Alexa!",
           "description": "La raccolta differenziata di Selargius resa semplice! \nAggiornata con il calendario 2019, questa skill ti renderà più semplice gestire la raccolta rifiuti.\nNuove funzionalità in arrivo!!!",
           "examplePhrases": [
-            "Alexa chiedi a differenziata a selargius cosa ritirano giovedì",
-            "Alexa chiedi a differenziata a selargius cosa passa mercoledì",
-            "Alexa chiedi a differenziata a selargius di domani"
+            "Alexa, apri differenziata selargius",
+            "Alexa, chiedi a differenziata selargius il giorno di raccolta del vetro",
+            "Alexa, chiedi a differenziata selargius cosa passa mercoledì"
           ],
           "keywords": [
             "Selargius",
