@@ -13,6 +13,6 @@
     "ask-sdk-model": "^1.0.0",
     "i18next": "^10.5.0",
     "i18next-sprintf-postprocessor": "^0.2.2",
-    "moment": "2.24.0"
+    "moment": "2.29.4"
   }
 }
